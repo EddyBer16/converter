@@ -1,0 +1,139 @@
+:root {
+    --background: #282A36;
+    --purple: #BD93F9;
+    --green: #50FA7B;
+    --card-background: #44475A;
+    --disabled: #44475A;
+    --white: #F8F8F2;
+    --grey: #A8ABBD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./assets/fonts/FiraCode-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./assets/fonts/FiraCode-SemiBold.ttf');
+    font-weight: bold;
+}
+
+body {
+    height: calc(100vh - 20px);
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    background-color: var(--background);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px 0;
+    height: 50px;
+}
+
+.header--logo {
+    font-size: 28pt;
+}
+
+.logo--number {
+    color: var(--green);
+}
+
+.logo--text {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--card-background);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.card--label {
+    font-size: 20pt;
+    color: var(--white);
+}
+
+.card--picker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.picker--option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: var(--background);
+    padding: 10px 40px;
+    color: var(--grey);
+    font-size: 16pt;
+    cursor: pointer;
+}
+
+.picker--option:hover {
+    background-color: var(--grey);
+    color: var(--background);
+}
+
+.picker--option__active {
+    background-color: var(--white);
+    color: var(--background);
+}
+
+.picker--option__disabled {
+    opacity: 0.5;
+    color: var(--disabled);
+    cursor: auto;
+}
+
+.picker--option__disabled:hover {
+    background-color: var(--background);
+    color: var(--disabled);
+}
+
+.card > input,
+.card--result {
+    font-size: 30pt;
+    color: var(--white);
+    text-align: right;
+    padding: 10px 40px;
+}
+
+.card > input {
+    background-color: var(--background);
+    border: none;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    outline: none;
+}
+
+.card > input,
+.picker--option {
+    border-radius: 10px;
+}
